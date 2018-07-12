@@ -9,8 +9,8 @@ Ik heb als concept een ‘voertuig fabriek’ bedacht, die verschillende voertui
 Ik heb een ‘CarFactory’ en een ‘MotorcycleFactory’ aangemaakt, die allebei hun eigen classes gebruiken. Deze factories zijn een extensie van de ‘VehicleFactory’. De classes ‘Car’ en ‘Motocycle’ die in de factories worden gebruikt zijn een extensie van de klasse ‘Vehicle’, hierin staan alle getters en setters. In de child classes worden alle ‘setters’ gedefinieerd. Omdat de child classes een extensie zijn van de ‘Vehicle’ classe, hoef je niet opnieuw de getters te definiëren. Elke ‘Vehicle’ heeft een merk, aantal wielen en een snelheid die je kan definiëren.
 
 ####Wat zijn de responsibilities van de geïmplementeerde classes?
-Dat je makkelijk een nieuwe classe kan aanmaken, die dezelfde onderdelen heeft.
+Dat je makkelijk een nieuwe klasse kan aanmaken, die gebruik maakt van dezelfde methodes. Ieder voertuig heeft een merk, aantal wielen en een snelheid, deze kunnen per voertuig verschillen. Iedere sub-klasse moet daarom andere waardes terug geven.
 
 ####In welk opzicht wordt polymorfie bereikt?
-Iedere ‘Vehicle’ heeft dezelfde functies, maar heeft zijn eigen waardes.
+Ieder voertuig maakt gebruik van dezelfde functies (setters), maar geven ieder andere waardes terug. Je hebt dus een abstracte klasse, die moet voldoen aan een interface/contract. Deze abstracte klasse wordt door de subklassen uitgebreid en maken gebruik van dezelfde setters. 
 
