@@ -1,27 +1,16 @@
-### Bareboned PHP 7 with Composer set-up
-Want to quickly test a new feature, practise a new design pattern or just create a new project for yourself?
-Well this probably means you'll have to set-up your project with the most basic packages available: PHPUnit & Composer.
+####Welk design pattern is gekozen?
+Factory Pattern
 
-And don't forget that you'll have to set-up _yet another_ docker config.. It's the same thing over and over again.
+####Wat zijn de kenmerken (toegevoegde waarde) van dit design pattern?
+Bij het gebruik van de factory pattern, maak je objecten zonder de exacte class te specificeren van het object dat je maakt. Dit kan bijvoorbeeld door gebruik te maken van een interface en het implementeren van ‘child’ classes.
 
-This repository tries to get you started with just 2 commands - just run:
+####Welke concept is bedacht om het pattern te kunnen toepassen?
+Ik heb als concept een ‘voertuig fabriek’ bedacht, die verschillende voertuigen kan aanmaken zoals een auto of een motor. Alle voertuigen moeten voldoen aan hetzelfde contract/interface. Ieder voertuig heeft bijvoorbeeld een merk, aantal wielen en een snelheid.
+Ik heb een ‘CarFactory’ en een ‘MotorcycleFactory’ aangemaakt, die allebei hun eigen classes gebruiken. Deze factories zijn een extensie van de ‘VehicleFactory’. De classes ‘Car’ en ‘Motocycle’ die in de factories worden gebruikt zijn een extensie van de klasse ‘Vehicle’, hierin staan alle getters en setters. In de child classes worden alle ‘setters’ gedefinieerd. Omdat de child classes een extensie zijn van de ‘Vehicle’ classe, hoef je niet opnieuw de getters te definiëren. Elke ‘Vehicle’ heeft een merk, aantal wielen en een snelheid die je kan definiëren.
 
-- `git pull git@github.com:KakaCarrotCake/barebone-php-composer.git`
-- `composer install`
+####Wat zijn de responsibilities van de geïmplementeerde classes?
+Dat je makkelijk een nieuwe classe kan aanmaken, die dezelfde onderdelen heeft.
 
-And BAM, A new - bareboned - PHP instance is ready for you to be played with!
+####In welk opzicht wordt polymorfie bereikt?
+Iedere ‘Vehicle’ heeft dezelfde functies, maar heeft zijn eigen waardes.
 
-You can also run a docker environment in an instant by running the following command in the `/docker` directory:
-
-- `docker-compose up`
-
-### Included in this repository are the following packages/software:
-- Docker
-- PHPUnit
-- Composer
--- PHP 7
--- MySQL
--- Nginx
-
-### Suggestions?
-Got any suggestions that would be a good fit for the project? Just leave a suggestion in the issues section :-).
